@@ -55,7 +55,7 @@ const Hero = () => {
                 src={video}
                 autoPlay
                 muted
-                loop
+                // loop
                 className="h-150 rounded-3xl shadow-2xl"
               />
               <div className="absolute top-6 right-0 sm:right-0 sm:-top-6 bg-white rounded-2xl p-4 shadow-xl">

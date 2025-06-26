@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Heart,
   Star,
@@ -12,8 +12,23 @@ import {
 } from "lucide-react";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
+import video from "../assets/tutorial.mp4";
 const Home = () => {
   const [isVisible, setIsVisible] = useState({});
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleVideoPlayback = () => {
+    if (!videoRef.current) return;
+
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+
+    setIsPlaying(!isPlaying);
+  };
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -142,14 +157,22 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Video Player */}
-            <div className="relative group cursor-pointer">
+            <div
+              className="relative group cursor-pointer"
+              onClick={toggleVideoPlayback}
+            >
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop"
-                  alt="Product Demo Video"
+                <video
+                  src={video}
+                  ref={videoRef}
+                  muted
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                <div
+                  className={`${
+                    isPlaying && "hidden"
+                  } absolute inset-0 bg-black/30 flex items-center justify-center`}
+                >
                   <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Play className="w-8 h-8 text-pink-500 ml-1" />
                   </div>
@@ -172,7 +195,6 @@ const Home = () => {
                 {[
                   "Professional application techniques",
                   "Long-lasting color demonstration",
-                  "Before and after results",
                   "Tips for different occasions",
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
