@@ -58,7 +58,7 @@ const Hero = () => {
                 loop
                 className="h-150 rounded-3xl shadow-2xl"
               />
-              <div className="absolute -top-6 right-0 sm:right-40 bg-white rounded-2xl p-4 shadow-xl">
+              <div className="absolute top-6 right-0 sm:right-0 sm:-top-6 bg-white rounded-2xl p-4 shadow-xl">
                 <div className="flex items-center space-x-2">
                   <Sparkles className="w-5 h-5 text-pink-500" />
                   <span className="text-gray-700 font-semibold">
