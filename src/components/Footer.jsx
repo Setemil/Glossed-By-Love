@@ -46,18 +46,21 @@ const Footer = () => {
               {/* Social Media */}
               <div className="flex space-x-4">
                 <a
+                  target="_blank"
                   href="https://www.instagram.com/glossed_by_love?igsh=MWRveGlscTdrc3pr"
                   className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg backdrop-blur-sm"
                 >
                   <Instagram size={20} className="text-pink-200" />
                 </a>
                 <a
+                  target="_blank"
                   href="https://snapchat.com/t/XlwmIWQB"
                   className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg backdrop-blur-sm"
                 >
                   <FaSnapchat size={20} className="text-pink-200" />
                 </a>
                 <a
+                  target="_blank"
                   href="https://www.tiktok.com/@glossed.by.love?_t=ZM-8xVmOH5d4zu&_r=1"
                   className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg backdrop-blur-sm"
                 >

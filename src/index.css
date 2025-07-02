@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
-@import "tailwindcss";
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
+  font-family: "Outfit";
   line-height: 1.5;
   font-weight: 400;
 
@@ -76,8 +75,95 @@ button:focus-visible {
   }
 }
 .special-text {
-  font-family: "League Script";
+  font-family: "Merienda";
 }
 .better-text {
   font-family: "Tangerine";
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

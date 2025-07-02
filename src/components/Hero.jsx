@@ -22,19 +22,19 @@ const Hero = () => {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+              <span className=" bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
                 Beautiful
               </span>
               <br />
               Lips Deserve
               <br />
-              <span className="bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent">
+              <span className="better-text bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent">
                 Beautiful
               </span>{" "}
               Care
             </h1>
 
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="special-text text-xl text-gray-600 mb-8 leading-relaxed">
               Discover our premium collection of lip products that combine
               luxury, comfort, and stunning colors to enhance your natural
               beauty.

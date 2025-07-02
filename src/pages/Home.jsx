@@ -13,6 +13,8 @@ import {
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import video from "../assets/tutorial.mp4";
+import glosses from "../products/Glosses.jpg";
+
 const Home = () => {
   const [isVisible, setIsVisible] = useState({});
   const videoRef = useRef(null);
@@ -53,25 +55,31 @@ const Home = () => {
 
   const products = [
     {
-      name: "Velvet Matte Collection",
+      name: "Lip Glosses",
       description: "Luxurious matte finish with all-day comfort",
-      image:
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop",
-      colors: ["#FF69B4", "#DC143C", "#8B0000", "#FF1493"],
+      image: glosses,
+      colors: ["#FF69B4", "#DC143C", "#8B0000", "ADADAD"],
     },
     {
-      name: "Glossy Lip Glaze",
+      name: "Lip Oils",
       description: "High-shine formula for radiant lips",
       image:
         "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=400&h=400&fit=crop",
       colors: ["#FFB6C1", "#FF69B4", "#DDA0DD", "#F0E68C"],
     },
     {
-      name: "Nourishing Lip Care",
+      name: "Lip scrubs",
       description: "Complete care for healthy, beautiful lips",
       image:
         "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop",
-      colors: ["#FFE4E1", "#FFC0CB", "#FF69B4", "#FF1493"],
+      colors: [],
+    },
+    {
+      name: "Lip balms",
+      description: "Complete care for healthy, beautiful lips",
+      image:
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop",
+      colors: [],
     },
   ];
 
