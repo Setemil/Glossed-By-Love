@@ -42,7 +42,9 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="group bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-pink-500/25 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                Explore Collection
+                <Link className="hover:text-white" to="/products">
+                  Explore Collection
+                </Link>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
@@ -55,7 +57,7 @@ const Hero = () => {
                 src={video}
                 autoPlay
                 muted
-                // loop
+                loop
                 className="h-150 rounded-3xl shadow-2xl"
               />
               <div className="absolute top-6 right-0 sm:right-0 sm:-top-6 bg-white rounded-2xl p-4 shadow-xl">

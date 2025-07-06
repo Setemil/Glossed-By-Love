@@ -1,4 +1,7 @@
 import glosses from "../products/Glosses.jpg";
+import balms from "../products/balm.JPG";
+import oils from "../products/colorChangingOil.JPG";
+import sets from "../products/lipComboSet.JPG";
 import { products } from "./products";
 
 export const categories = [
@@ -13,28 +16,28 @@ export const categories = [
     featured: true,
   },
   {
-    id: "balms",
-    name: "Lip Balms",
-    description: "Nourishing and hydrating balms for everyday lip care",
-    image: "🌸",
+    id: "balms_and_scrubs",
+    name: "Balms & Scrubs",
+    description: "Nourishing and hydrating balms for everyday lip care ",
+    image: balms,
     bgGradient: "from-purple-400 to-pink-500",
-    productCount: products.balms.length,
+    productCount: products.balms_and_scrubs.length,
     featured: false,
   },
   {
     id: "oils",
     name: "Lip Oils",
     description: "Luxurious oils that hydrate and add natural shine",
-    image: "✨",
+    image: oils,
     bgGradient: "from-amber-400 to-orange-500",
     productCount: products.oils.length,
     featured: false,
   },
   {
     id: "sets",
-    name: "Gift Sets",
+    name: "Sets and Extras",
     description: "Curated collections perfect for gifting or treating yourself",
-    image: "🎁",
+    image: sets,
     bgGradient: "from-violet-400 to-purple-500",
     productCount: products.sets.length,
     featured: true,

@@ -3,7 +3,6 @@ import { Heart, ShoppingBag, ArrowLeft, Sparkles, Star } from "lucide-react";
 import { products } from "../assets/products.js";
 import { categories } from "../assets/categories.js";
 
-
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [favorites, setFavorites] = useState(new Set());
@@ -28,6 +27,7 @@ const Products = () => {
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50 mt-15">
+        <div className="h-8"></div>
         {/* Header with Back Button */}
         <section className="relative overflow-hidden bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 text-white py-16">
           <div className="absolute inset-0 bg-black/10"></div>
@@ -138,6 +138,8 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50 mt-15">
+      <div className="h-8"></div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 text-white py-20">
         <div className="absolute inset-0 bg-black/10"></div>

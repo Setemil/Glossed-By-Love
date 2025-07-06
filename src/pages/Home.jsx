@@ -14,6 +14,8 @@ import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import video from "../assets/tutorial.mp4";
 import glosses from "../products/Glosses.jpg";
+import oils from "../products/colorChangingOil.JPG";
+import scrubs from "../products/scrubs.JPG";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -61,24 +63,15 @@ const Home = () => {
       colors: ["#FF69B4", "#DC143C", "#8B0000", "ADADAD"],
     },
     {
-      name: "Lip Oils",
-      description: "High-shine formula for radiant lips",
-      image:
-        "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=400&h=400&fit=crop",
-      colors: ["#FFB6C1", "#FF69B4", "#DDA0DD", "#F0E68C"],
-    },
-    {
       name: "Lip scrubs",
       description: "Complete care for healthy, beautiful lips",
-      image:
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop",
+      image: scrubs,
       colors: [],
     },
     {
-      name: "Lip balms",
+      name: "Lip oils",
       description: "Complete care for healthy, beautiful lips",
-      image:
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop",
+      image: oils,
       colors: [],
     },
   ];
@@ -270,7 +263,9 @@ const Home = () => {
                 </div>
 
                 <button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center group">
-                  View Collection
+                  <Link className="hover:text-white" to="/products">
+                    View Collection
+                  </Link>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

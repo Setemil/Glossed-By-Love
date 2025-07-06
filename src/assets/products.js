@@ -5,6 +5,14 @@ import unpigmentedPinkGloss from "../products/unpigmentedPink.jpg";
 import pigmentedPinkGloss from "../products/pigmentedPink.jpg";
 import nudeGloss from "../products/nudeGloss.jpg";
 import brownGloss from "../products/brownGloss.jpg";
+import scrubs from "../products/scrubs.JPG";
+import balms from "../products/balm.JPG";
+import colorChange from "../products/colorChangingOil.JPG";
+import moisturizingOil from "../products/moisturizingLipOil.JPG";
+import essential from "../products/essentialSet.JPG";
+import combo from "../products/lipComboSet.JPG";
+import mask from "../products/lipMask.JPG";
+import brush from "../products/lipBrush.JPG";
 
 export const products = {
   glosses: [
@@ -66,90 +74,74 @@ export const products = {
       bestseller: false,
     },
   ],
-  balms: [
+  balms_and_scrubs: [
     {
       id: 5,
-      name: "Vanilla Dreams",
+      name: "Lip Balms",
       description: "Creamy vanilla-scented healing balm",
-      price: "$12",
-      image: "🧴",
+      price: "₦2000",
+      image: balms,
       bestseller: true,
     },
     {
       id: 6,
-      name: "Mint Fresh",
+      name: "Lip Scrubs",
       description: "Cooling mint balm for instant refresh",
-      price: "$14",
-      image: "🌿",
+      price: "₦1500",
+      image: scrubs,
       bestseller: false,
-    },
-    {
-      id: 7,
-      name: "Coconut Bliss",
-      description: "Tropical coconut balm with SPF protection",
-      price: "$15",
-      image: "🥥",
-      bestseller: false,
-    },
-    {
-      id: 8,
-      name: "Shea Butter Classic",
-      description: "Pure shea butter for maximum hydration",
-      price: "$13",
-      image: "🌰",
-      bestseller: true,
     },
   ],
   oils: [
     {
       id: 9,
-      name: "Jojoba Silk",
+      name: "Color Changing Lip Oil",
       description: "Lightweight jojoba oil for daily nourishment",
       price: "$22",
-      image: "🌾",
+      image: colorChange,
       bestseller: true,
     },
     {
       id: 10,
-      name: "Argan Luxury",
+      name: "Moisturizing Lip Oil",
       description: "Premium argan oil for intensive care",
       price: "$28",
-      image: "🫒",
-      bestseller: false,
-    },
-    {
-      id: 11,
-      name: "Rosehip Glow",
-      description: "Vitamin-rich rosehip oil for repair",
-      price: "$25",
-      image: "🌹",
+      image: moisturizingOil,
       bestseller: false,
     },
   ],
   sets: [
     {
-      id: 12,
-      name: "Complete Care Set",
+      id: 11,
+      name: "Essential Set",
       description: "Full collection of our bestselling products",
       price: "$65",
-      image: "🎀",
+      image: essential,
       bestseller: true,
     },
     {
-      id: 13,
-      name: "Travel Essentials",
+      id: 12,
+      name: "Color Combo Set",
       description: "Perfect mini sizes for on-the-go care",
       price: "$35",
-      image: "✈️",
+      image: combo,
+      bestseller: false,
+    },
+    {
+      id: 13,
+      name: "Lip Brushes",
+      description: "Full collection of our bestselling products",
+      price: "$65",
+      image: brush,
       bestseller: false,
     },
     {
       id: 14,
-      name: "Seasonal Collection",
-      description: "Limited edition seasonal flavors",
-      price: "$45",
-      image: "🌸",
-      bestseller: true,
+      name: "Lip Masks",
+      description: "Perfect mini sizes for on-the-go care",
+      price: "$35",
+      image: mask,
+      bestseller: false,
     },
   ],
 };
