@@ -187,40 +187,41 @@ const ReviewsPage = () => {
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-20 bg-white rounded-3xl shadow-md border border-gray-200 p-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Review Summary
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-600 mb-4">
-                {(
-                  reviewsData.reduce(
-                    (acc, review) =>
-                      acc + getRating(review, "Customer Satisfaction"),
-                    0
-                  ) / reviewsData.length
-                ).toFixed(1)}{" "}
-                / 5
+          <div className="mt-20 bg-white rounded-3xl shadow-md border border-gray-200 p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Review Summary
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+              <div className="text-center">
+                <div className="text-5xl font-bold text-purple-600 mb-4">
+                  {(
+                    reviewsData.reduce(
+                      (acc, review) =>
+                        acc + getRating(review, "Customer Satisfaction"),
+                      0
+                    ) / reviewsData.length
+                  ).toFixed(1)}{" "}
+                  / 5
+                </div>
+                <div className="text-xl text-gray-600">Avg Satisfaction</div>
               </div>
-              <div className="text-xl text-gray-600">Avg Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-blue-600 mb-4">
-                {(
-                  reviewsData.reduce(
-                    (acc, review) =>
-                      acc +
-                      getRating(review, "How likely are you to recommend"),
-                    0
-                  ) / reviewsData.length
-                ).toFixed(1)}{" "}
-                / 5
+              <div className="text-center">
+                <div className="text-5xl font-bold text-blue-600 mb-4">
+                  {(
+                    reviewsData.reduce(
+                      (acc, review) =>
+                        acc +
+                        getRating(review, "How likely are you to recommend"),
+                      0
+                    ) / reviewsData.length
+                  ).toFixed(1)}{" "}
+                  / 5
+                </div>
+                <div className="text-xl text-gray-600">Avg Recommendation</div>
               </div>
-              <div className="text-xl text-gray-600">Avg Recommendation</div>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
   );

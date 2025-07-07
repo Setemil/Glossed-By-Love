@@ -16,10 +16,12 @@ import video from "../assets/tutorial.mp4";
 import glosses from "../products/Glosses.jpg";
 import oils from "../products/colorChangingOil.JPG";
 import scrubs from "../products/scrubs.JPG";
+import production from "../assets/production.mov";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState({});
   const videoRef = useRef(null);
+  const secVideoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleVideoPlayback = () => {
@@ -122,10 +124,18 @@ const Home = () => {
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&h=400&fit=crop"
-                alt="Our Story"
+              <video
+                src={production}
                 className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                ref={secVideoRef}
+                muted
+                loop
+                onMouseEnter={() => {
+                  if (secVideoRef.current) secVideoRef.current.play();
+                }}
+                onMouseLeave={() => {
+                  if (secVideoRef.current) secVideoRef.current.pause();
+                }}
               />
             </div>
           </div>

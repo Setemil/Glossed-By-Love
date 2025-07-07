@@ -5,17 +5,6 @@ import { categories } from "../assets/categories.js";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [favorites, setFavorites] = useState(new Set());
-
-  const toggleFavorite = (productId) => {
-    const newFavorites = new Set(favorites);
-    if (newFavorites.has(productId)) {
-      newFavorites.delete(productId);
-    } else {
-      newFavorites.add(productId);
-    }
-    setFavorites(newFavorites);
-  };
 
   const handleBackToCategories = () => {
     setSelectedCategory(null);
@@ -71,21 +60,6 @@ const Products = () => {
                       </span>
                     </div>
                   )}
-
-                  {/* Favorite Button */}
-                  <button
-                    onClick={() => toggleFavorite(product.id)}
-                    className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 backdrop-blur-sm transition-all duration-300 hover:bg-white hover:scale-110"
-                  >
-                    <Heart
-                      size={18}
-                      className={`transition-colors duration-300 ${
-                        favorites.has(product.id)
-                          ? "text-red-500 fill-red-500"
-                          : "text-gray-400"
-                      }`}
-                    />
-                  </button>
 
                   {/* Product Image Area */}
                   <div className="relative h-64 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center overflow-hidden">
